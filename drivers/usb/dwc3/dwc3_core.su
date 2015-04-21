@@ -1,0 +1,10 @@
+dwc3_core.c:57:5:dwc3_get_device_id	4	static
+dwc3_core.c:64:6:dwc3_put_device_id	4	static
+dwc3_core.c:68:6:dwc3_set_mode	4	static
+dwc3_core.c:164:13:dwc3_free_event_buffers	16	static
+dwc3_core.c:243:13:dwc3_event_buffers_cleanup	8	static
+dwc3_core.c:371:15:dwc3_probe	24	static
+dwc3_core.c:469:15:dwc3_remove	8	static
+dwc3_core.c:498:5:usb_gadget_init_udc	4	static
+dwc3_core.c:502:6:usb_gadget_exit_udc	4	static
+dwc3_core.c:508:5:usb_gadget_handle_interrupts	4	static

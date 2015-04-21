@@ -1,0 +1,2 @@
+pci.c:18:13:config_pci_bridge	16	static
+pci.c:34:6:pci_init_board	4	static

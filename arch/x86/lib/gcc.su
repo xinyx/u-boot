@@ -1,0 +1,4 @@
+gcc.c:35:1:__wrap___divdi3	28	static
+gcc.c:36:1:__wrap___udivdi3	28	static
+gcc.c:37:1:__wrap___moddi3	28	static
+gcc.c:38:1:__wrap___umoddi3	28	static

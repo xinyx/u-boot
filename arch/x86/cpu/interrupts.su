@@ -1,0 +1,7 @@
+interrupts.c:34:6:dump_regs	36	static
+interrupts.c:110:6:set_vector	4	static
+interrupts.c:124:5:cpu_init_interrupts	8	static
+interrupts.c:155:6:__do_irq	12	static
+interrupts.c:161:6:enable_interrupts	4	static
+interrupts.c:166:5:disable_interrupts	4	static
+interrupts.c:176:6:irq_llsr	12	static

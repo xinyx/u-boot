@@ -1,0 +1,1 @@
+cmd_drivers/pcmcia/built-in.o :=  i586-poky-linux-ld.bfd   --emit-relocs -Bsymbolic -Bsymbolic-functions -m elf_i386   -r -o drivers/pcmcia/built-in.o drivers/pcmcia/rpx_pcmcia.o drivers/pcmcia/tqm8xx_pcmcia.o 

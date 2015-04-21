@@ -1,0 +1,4 @@
+part_mac.c:40:5:test_part_mac	1176	static
+part_mac.c:64:6:print_part_mac	1232	static
+part_mac.c:150:12:part_mac_read_ddb	16	static
+part_mac.c:211:5:get_partition_info_mac	1204	static

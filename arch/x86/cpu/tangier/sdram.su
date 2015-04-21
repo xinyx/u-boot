@@ -1,0 +1,5 @@
+sdram.c:24:10:install_e820_map	4	static
+sdram.c:41:7:board_get_usable_ram_top	4	static
+sdram.c:77:5:dram_init_f	8	static
+sdram.c:100:5:dram_init_banksize	4	static
+sdram.c:136:5:dram_init	4	static

@@ -1,0 +1,4 @@
+relocate.c:28:5:copy_uboot_to_ram	4	static
+relocate.c:37:5:copy_fdt_to_ram	4	static
+relocate.c:53:5:clear_bss	4	static
+relocate.c:67:5:do_elf_reloc_fixups	16	static

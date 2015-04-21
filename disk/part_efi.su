@@ -1,0 +1,11 @@
+part_efi.c:52:14:print_efiname	8	static
+part_efi.c:80:6:print_part_efi	96	dynamic
+part_efi.c:129:5:get_partition_info_efi	40	dynamic
+part_efi.c:180:5:test_part_efi	20	dynamic
+part_efi.c:198:12:set_protective_mbr	608	static
+part_efi.c:226:5:write_gpt_table	36	static
+part_efi.c:284:5:gpt_fill_pte	64	static
+part_efi.c:360:5:gpt_fill_header	8	static
+part_efi.c:382:5:gpt_restore	32	static
+part_efi.c:630:12:is_pte_valid	32	static
+part_efi.c:476:12:1	48	static

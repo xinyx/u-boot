@@ -1,0 +1,1 @@
+cmd_board/intel/edison/built-in.o :=  i586-poky-linux-ld.bfd   --emit-relocs -Bsymbolic -Bsymbolic-functions -m elf_i386   -r -o board/intel/edison/built-in.o board/intel/edison/edison_start.o board/intel/edison/edison.o 

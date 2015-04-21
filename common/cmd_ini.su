@@ -1,0 +1,5 @@
+cmd_ini.c:40:14:rstrip	8	static
+cmd_ini.c:60:14:find_char_or_comment	8	static
+cmd_ini.c:203:12:ini_handler	28	static
+cmd_ini.c:230:12:do_ini	20	static
+cmd_ini.c:117:12:1	344	static

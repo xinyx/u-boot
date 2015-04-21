@@ -1,0 +1,1 @@
+cmd_drivers/mmc/built-in.o :=  i586-poky-linux-ld.bfd   --emit-relocs -Bsymbolic -Bsymbolic-functions -m elf_i386   -r -o drivers/mmc/built-in.o drivers/mmc/mmc.o drivers/mmc/sdhci.o drivers/mmc/tangier_sdhci.o drivers/mmc/mmc_write.o 

@@ -1,0 +1,4 @@
+sfi.c:9:12:sfi_table_check	28	static
+sfi.c:31:22:sfi_search_mmap	36	static
+sfi.c:71:10:sfi_setup_e820	60	static
+sfi.c:123:13:sfi_get_ram_size	48	static

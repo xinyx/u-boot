@@ -1,0 +1,4 @@
+pcat_interrupts.c:27:5:interrupt_init	4	static
+pcat_interrupts.c:70:6:mask_irq	8	static
+pcat_interrupts.c:85:6:unmask_irq	8	static
+pcat_interrupts.c:100:6:specific_eoi	4	static

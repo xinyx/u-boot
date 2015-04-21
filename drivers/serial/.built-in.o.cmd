@@ -1,0 +1,1 @@
+cmd_drivers/serial/built-in.o :=  i586-poky-linux-ld.bfd   --emit-relocs -Bsymbolic -Bsymbolic-functions -m elf_i386   -r -o drivers/serial/built-in.o drivers/serial/serial.o drivers/serial/serial_tng.o 

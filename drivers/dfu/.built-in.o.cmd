@@ -1,0 +1,1 @@
+cmd_drivers/dfu/built-in.o :=  i586-poky-linux-ld.bfd   --emit-relocs -Bsymbolic -Bsymbolic-functions -m elf_i386   -r -o drivers/dfu/built-in.o drivers/dfu/dfu.o drivers/dfu/dfu_mmc.o drivers/dfu/dfu_ram.o 

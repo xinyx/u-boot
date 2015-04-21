@@ -1,0 +1,2 @@
+cmd_portio.c:24:5:do_portio_out	16	static
+cmd_portio.c:83:5:do_portio_in	24	static

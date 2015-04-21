@@ -1,0 +1,11 @@
+tangier.c:26:5:cpu_init_f	4	static
+tangier.c:32:5:board_early_init_f	4	static
+tangier.c:37:5:board_early_init_r	4	static
+tangier.c:42:5:board_late_init	104	static
+tangier.c:88:6:show_boot_progress	4	static
+tangier.c:93:5:last_stage_init	4	static
+tangier.c:103:5:board_final_cleanup	4	static
+tangier.c:109:6:panic_puts	4	static
+tangier.c:113:5:board_mmc_init	4	static
+tangier.c:123:55:get_tbclk_mhz	12	static
+tangier.c:168:6:reset_cpu	4	static

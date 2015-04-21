@@ -1,0 +1,2 @@
+string.c:17:7:memset	16	static
+string.c:105:7:memcpy	16	static

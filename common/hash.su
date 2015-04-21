@@ -1,0 +1,3 @@
+hash.c:207:26:find_hash_algo	8	static
+hash.c:229:5:hash_block	28	static
+hash.c:251:5:hash_command	144	static

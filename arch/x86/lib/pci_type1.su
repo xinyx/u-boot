@@ -1,0 +1,7 @@
+pci_type1.c:29:1:type1_read_config_byte	8	static
+pci_type1.c:30:1:type1_read_config_word	8	static
+pci_type1.c:31:1:type1_read_config_dword	8	static
+pci_type1.c:33:1:type1_write_config_byte	8	static
+pci_type1.c:34:1:type1_write_config_word	8	static
+pci_type1.c:35:1:type1_write_config_dword	8	static
+pci_type1.c:41:6:pci_setup_type1	4	static

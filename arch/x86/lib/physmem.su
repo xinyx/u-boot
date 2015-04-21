@@ -1,0 +1,2 @@
+physmem.c:161:13:x86_phys_memset_page	24	static
+physmem.c:182:13:arch_phys_memset	76	static

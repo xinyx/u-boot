@@ -1,0 +1,10 @@
+intel_scu_ipc.c:19:6:intel_scu_ipc_send_command	4	static
+intel_scu_ipc.c:29:6:ipc_data_writel	4	static
+intel_scu_ipc.c:42:5:ipc_read_status	4	static
+intel_scu_ipc.c:47:4:ipc_data_readb	4	static
+intel_scu_ipc.c:52:5:ipc_data_readl	4	static
+intel_scu_ipc.c:57:5:intel_scu_ipc_check_status	20	static
+intel_scu_ipc.c:90:5:intel_scu_ipc_simple_command	4	static
+intel_scu_ipc.c:99:5:intel_scu_ipc_raw_cmd	36	static
+intel_scu_ipc.c:139:5:intel_scu_ipc_command	28	static
+intel_scu_ipc.c:147:5:init_scu_ipc	4	static

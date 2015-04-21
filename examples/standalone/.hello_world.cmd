@@ -1,0 +1,1 @@
+cmd_examples/standalone/hello_world := i586-poky-linux-ld.bfd   --emit-relocs -Bsymbolic -Bsymbolic-functions -m elf_i386 -g -Ttext 0x40000 -o examples/standalone/hello_world -e hello_world examples/standalone/hello_world.o examples/standalone/libstubs.o -L/home/gxgx/edsion/edison-src/build/tmp/sysroots/edison/usr/lib/i586-poky-linux/4.8.2 -lgcc

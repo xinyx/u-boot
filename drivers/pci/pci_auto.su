@@ -1,0 +1,8 @@
+pci_auto.c:35:6:pciauto_region_init	4	static
+pci_auto.c:45:6:pciauto_region_align	4	static
+pci_auto.c:50:5:pciauto_region_allocate	12	static
+pci_auto.c:83:6:pciauto_setup_device	44	static
+pci_auto.c:194:6:pciauto_prescan_setup_bridge	36	static
+pci_auto.c:254:6:pciauto_postscan_setup_bridge	28	static
+pci_auto.c:296:6:pciauto_config_init	16	static
+pci_auto.c:364:5:pciauto_config_device	32	static

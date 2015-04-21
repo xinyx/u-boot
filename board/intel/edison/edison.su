@@ -1,0 +1,4 @@
+edison.c:26:5:board_usb_init	4	static
+edison.c:31:6:watchdog_reset	4	static
+edison.c:44:5:watchdog_disable	4	static
+edison.c:50:5:watchdog_init	4	static

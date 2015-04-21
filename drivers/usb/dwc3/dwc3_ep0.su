@@ -1,0 +1,10 @@
+dwc3_ep0.c:67:12:dwc3_ep0_start_trans	52	static
+dwc3_ep0.c:117:12:__dwc3_gadget_ep0_queue	32	static
+dwc3_ep0.c:169:5:dwc3_gadget_ep0_queue	4	static
+dwc3_ep0.c:206:13:dwc3_ep0_stall_and_restart	12	static
+dwc3_ep0.c:226:6:dwc3_ep0_out_start	20	static
+dwc3_ep0.c:252:13:dwc3_ep0_status_cmpl	4	static
+dwc3_ep0.c:307:12:dwc3_ep0_handle_feature	12	static
+dwc3_ep0.c:443:12:dwc3_ep0_delegate_req	4	static
+dwc3_ep0.c:715:13:dwc3_ep0_do_control_status	28	static
+dwc3_ep0.c:826:6:dwc3_ep0_interrupt	56	static

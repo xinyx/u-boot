@@ -1,0 +1,15 @@
+serial.c:33:13:serial_null	4	static
+serial.c:42:12:on_baudrate	20	static
+serial.c:175:6:serial_register	4	static
+serial.c:207:6:serial_initialize	4	static
+serial.c:268:6:serial_stdio_init	68	static
+serial.c:304:5:serial_assign	12	static
+serial.c:324:6:serial_reinit_all	8	static
+serial.c:347:30:get_current	8	static
+serial.c:381:5:serial_init	4	static
+serial.c:396:6:serial_setbrg	4	static
+serial.c:412:5:serial_getc	4	static
+serial.c:427:5:serial_tstc	4	static
+serial.c:443:6:serial_putc	8	static
+serial.c:461:6:serial_puts	8	static
+serial.c:478:6:default_serial_puts	12	static

@@ -1,0 +1,7 @@
+zimage.c:42:10:generic_install_e820_map	4	static
+zimage.c:104:21:load_zimage	52	static
+zimage.c:214:5:setup_zimage	32	static
+zimage.c:268:13:board_final_cleanup	4	static
+zimage.c:272:6:boot_zimage	28	static
+zimage.c:309:6:__setup_pcat_compatibility	4	static
+zimage.c:313:5:do_zboot	40	static

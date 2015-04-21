@@ -1,0 +1,6 @@
+cmd_pci.c:41:6:pciinfo	52	static
+cmd_pci.c:101:6:pci_header_show_brief	36	static
+cmd_pci.c:126:6:pci_header_show	28	static
+cmd_pci.c:305:12:pci_cfg_write	4	static
+cmd_pci.c:393:12:do_pci	80	static
+cmd_pci.c:322:1:0	44	static

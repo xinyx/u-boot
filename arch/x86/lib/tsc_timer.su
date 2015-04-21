@@ -1,0 +1,9 @@
+tsc_timer.c:17:6:timer_set_base	4	static
+tsc_timer.c:27:45:get_ticks	16	static
+tsc_timer.c:40:62:get_tbclk_mhz	4	static
+tsc_timer.c:50:15:get_tbclk	4	static
+tsc_timer.c:60:7:get_timer	24	static
+tsc_timer.c:65:47:timer_get_us	20	static
+tsc_timer.c:70:7:timer_get_boot_us	4	static
+tsc_timer.c:75:6:__udelay	24	static
+tsc_timer.c:86:5:timer_init	4	static

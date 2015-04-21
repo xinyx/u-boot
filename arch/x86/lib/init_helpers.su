@@ -1,0 +1,7 @@
+init_helpers.c:15:14:board_get_usable_ram_top	4	static
+init_helpers.c:20:5:calculate_relocation_address	4	static
+init_helpers.c:67:5:init_cache_f_r	4	static
+init_helpers.c:75:5:init_bd_struct_r	4	static
+init_helpers.c:83:5:init_func_spi	4	static
+init_helpers.c:91:5:find_fdt	8	static
+init_helpers.c:107:5:prepare_fdt	8	static

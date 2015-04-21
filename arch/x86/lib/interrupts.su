@@ -1,0 +1,4 @@
+interrupts.c:46:6:irq_install_handler	36	static
+interrupts.c:74:6:irq_free_handler	20	static
+interrupts.c:96:6:do_irq	20	static
+interrupts.c:123:5:do_irqinfo	32	static

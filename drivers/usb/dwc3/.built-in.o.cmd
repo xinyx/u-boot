@@ -1,0 +1,1 @@
+cmd_drivers/usb/dwc3/built-in.o :=  i586-poky-linux-ld.bfd   --emit-relocs -Bsymbolic -Bsymbolic-functions -m elf_i386   -r -o drivers/usb/dwc3/built-in.o drivers/usb/dwc3/dwc3_core.o drivers/usb/dwc3/dwc3_ep0.o drivers/usb/dwc3/dwc3_misc.o drivers/usb/dwc3/dwc3_gadget.o 

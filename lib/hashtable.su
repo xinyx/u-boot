@@ -1,0 +1,12 @@
+hashtable.c:100:5:hcreate_r	12	static
+hashtable.c:139:6:hdestroy_r	16	static
+hashtable.c:201:5:hmatch_r	24	static
+hashtable.c:271:5:hsearch_r	44	static
+hashtable.c:442:5:hdelete_r	76	static
+hashtable.c:523:12:cmpkey	4	static
+hashtable.c:590:9:hexport_r	68	dynamic
+hashtable.c:777:5:himport_r	104	dynamic
+hashtable.c:948:5:hwalk_r	16	static
+hashtable.c:428:13:1	16	static
+hashtable.c:718:12:2	24	static
+hashtable.c:531:12:3	16	static

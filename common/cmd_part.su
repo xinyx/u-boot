@@ -1,0 +1,5 @@
+cmd_part.c:30:5:do_part_info	172	static
+cmd_part.c:66:5:do_part_find	176	static
+cmd_part.c:145:5:do_part_uuid	144	static
+cmd_part.c:168:5:do_part_list	12	static
+cmd_part.c:185:5:do_part	12	static
