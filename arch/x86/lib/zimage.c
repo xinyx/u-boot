@@ -365,6 +365,35 @@ int do_zboot(cmd_tbl_t *cmdtp, int flag, int argc, char *const argv[])
 	return -1;
 }
 
+int do_loade820(cmd_tbl_t *cmdtp, int flag, int argc, char *const argv[])
+{
+	struct e820map *memmap = (struct e820map *)0x8000;
+	if (argc >= 2)
+		memmap = (struct e820map *)simple_strtoul(argv[1], NULL, 16);
+
+	memmap->nr_map = install_e820_map(E820_X_MAX, memmap->map);
+	printf("## E820 Loaded to 0x%08lX, number %d\n", (ulong)memmap, memmap->nr_map);
+	if (memmap->nr_map <= 0)
+		return -1;
+	else {
+		printf("e820map:\n");
+		int i;
+		for (i = 0; i < memmap->nr_map; i++) {
+			uint64_t begin = memmap->map[i].addr, end = begin + memmap->map[i].size;
+			printf("  memory: %08llx, [%08llx, %08llx], type = %d.\n",
+					memmap->map[i].size, begin, end - 1,
+					memmap->map[i].type);
+		}
+		return 0;
+	}
+}
+
+U_BOOT_CMD(
+	loade820,      2,      0,      do_loade820,
+	"Load e820map to addr",
+	"[address]\n"
+);
+
 U_BOOT_CMD(
 	zboot, 5, 0,	do_zboot,
 	"Boot bzImage",

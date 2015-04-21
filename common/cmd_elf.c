@@ -19,6 +19,7 @@
 #include <net.h>
 #include <elf.h>
 #include <vxworks.h>
+#include <asm/bootparam.h>
 
 #if defined(CONFIG_WALNUT) || defined(CONFIG_SYS_VXWORKS_MAC_PTR)
 DECLARE_GLOBAL_DATA_PTR;
@@ -42,6 +43,19 @@ unsigned long do_bootelf_exec(ulong (*entry)(int, char * const[]),
 	if (dcache)
 		dcache_disable();
 
+	struct e820map *memmap = (struct e820map *)0x8000;
+	if (memmap->nr_map <= 0)
+		return -1;
+	else {
+		printf("before exec e820map:\n");
+		int i;
+		for (i = 0; i < memmap->nr_map; i++) {
+			uint64_t begin = memmap->map[i].addr, end = begin + memmap->map[i].size;
+			printf("  memory: %08llx, [%08llx, %08llx], type = %d.\n",
+					memmap->map[i].size, begin, end - 1,
+					memmap->map[i].type);
+		}
+	}
 	/*
 	 * pass address parameter as argv[0] (aka command name),
 	 * and all remaining args
@@ -286,7 +300,7 @@ static unsigned long load_elf_image_phdr(unsigned long addr)
 	for (i = 0; i < ehdr->e_phnum; ++i) {
 		void *dst = (void *)(uintptr_t) phdr->p_paddr;
 		void *src = (void *) addr + phdr->p_offset;
-		debug("Loading phdr %i to 0x%p (%i bytes)\n",
+		printf("Loading phdr %i to 0x%p (%i bytes)\n",
 			i, dst, phdr->p_filesz);
 		if (phdr->p_filesz)
 			memcpy(dst, src, phdr->p_filesz);

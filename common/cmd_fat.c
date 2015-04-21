@@ -16,6 +16,7 @@
 #include <part.h>
 #include <fat.h>
 #include <fs.h>
+#include <elf.h>
 
 int do_fat_fsload (cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
 {
@@ -36,6 +37,88 @@ U_BOOT_CMD(
 	"      If either 'pos' or 'bytes' are not aligned to\n"
 	"      ARCH_DMA_MINALIGN then a misaligned buffer warning will\n"
 	"      be printed and performance will suffer for the load."
+);
+
+
+int do_bootu(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
+{
+	unsigned long addr = 0x10000;
+	const char *filename;
+	int len_read;
+
+	if (argc < 2)
+		return CMD_RET_USAGE;
+	if (argc > 4)
+		return CMD_RET_USAGE;
+
+	if (fs_set_blk_dev(argv[1], (argc >= 3) ? argv[2] : NULL, FS_TYPE_FAT))
+		return 1;
+
+	if (argc == 4) {
+		filename = argv[3];
+	} else {
+		filename = getenv("bootfile");
+		if (!filename) {
+			puts("** No boot file defined **\n");
+			return 1;
+		}
+	}
+
+	len_read = fs_read(filename, addr, 0, 4096);
+	if (len_read <= 0)
+		return 1;
+
+	Elf32_Ehdr *ehdr;		/* Elf header structure pointer     */
+	Elf32_Phdr *phdr;		/* Program header structure pointer */
+	int i;
+
+	ehdr = (Elf32_Ehdr *) addr;
+	if (!IS_ELF(*ehdr)) {
+		printf("## No elf image at address 0x%08lx\n", addr);
+		return 1;
+	}
+	phdr = (Elf32_Phdr *) (addr + ehdr->e_phoff);
+
+	/* Load each program header */
+	for (i = 0; i < ehdr->e_phnum; ++i) {
+		void *dst = (void *)(uintptr_t) phdr->p_paddr;
+		printf("Loading phdr %i to 0x%p (%i bytes)\n",
+			i, dst, phdr->p_filesz);
+		if (phdr->p_filesz) {
+			if (fs_set_blk_dev(argv[1], (argc >= 3) ? argv[2] : NULL, FS_TYPE_FAT))
+				return 1;
+			len_read = fs_read(filename, (ulong)dst, phdr->p_offset, phdr->p_filesz);
+			printf("Len read: %d\n", len_read);
+		}
+		if (phdr->p_filesz != phdr->p_memsz)
+			memset(dst + phdr->p_filesz, 0x00,
+				phdr->p_memsz - phdr->p_filesz);
+		flush_cache((unsigned long)dst, phdr->p_filesz);
+		++phdr;
+	}
+
+	addr = ehdr->e_entry;
+	printf("## Starting application at 0x%08lx ...\n", addr);
+
+	/*
+	 * pass address parameter as argv[0] (aka command name),
+	 * and all remaining args
+	 */
+	unsigned long do_bootelf_exec(ulong (*entry)(int, char * const[]),
+			int argc, char * const argv[]);
+	if (do_bootelf_exec((void *)addr, argc - 1, argv + 1) != 0) {
+		printf("## Application terminated");
+		return 1;
+	}
+	return 0;
+}
+
+
+U_BOOT_CMD(
+	bootu,	4,	0,	do_bootu,
+	"load ELF file from a dos filesystem",
+	"<interface> [<dev[:part]>]  <filename>\n"
+	"    - Load ELF file 'filename' from 'dev' on 'interface'"
 );
 
 static int do_fat_ls(cmd_tbl_t *cmdtp, int flag, int argc, char * const argv[])
