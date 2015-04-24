@@ -1,0 +1,7 @@
+#!/bin/env sh
+cd /home/gxgx/edsion/edison-src/build/tmp/work/edison-poky-linux/u-boot/2014.04-1-r0/temp
+./run.do_compile
+cd /home/gxgx/edsion/edison-src/build/tmp/work/edison-poky-linux/u-boot/2014.04-1-r0/git
+dd if=/dev/zero of=u-boot-xinyx.bin bs=240K count=1
+dd if=u-boot.bin of=u-boot-xinyx.bin bs=4K seek=1 conv=notrunc
+
