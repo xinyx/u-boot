@@ -445,6 +445,7 @@ deps_common/cmd_fat.o := \
   include/fat.h \
     $(wildcard include/config/support/vfat.h) \
   include/fs.h \
+  include/elf.h \
 
 common/cmd_fat.o: $(deps_common/cmd_fat.o)
 

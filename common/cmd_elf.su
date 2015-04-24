@@ -1,5 +1,5 @@
-cmd_elf.c:32:15:do_bootelf_exec	24	static
-cmd_elf.c:62:5:valid_elf_image	12	static
-cmd_elf.c:93:5:do_bootelf	32	static
-cmd_elf.c:145:5:do_bootvx	164	static
-cmd_elf.c:303:22:load_elf_image_shdr	16	static
+cmd_elf.c:33:15:do_bootelf_exec	72	static
+cmd_elf.c:76:5:valid_elf_image	12	static
+cmd_elf.c:107:5:do_bootelf	44	static
+cmd_elf.c:159:5:do_bootvx	164	static
+cmd_elf.c:317:22:load_elf_image_shdr	16	static

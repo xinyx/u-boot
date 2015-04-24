@@ -446,6 +446,22 @@ deps_common/cmd_elf.o := \
   include/linux/ctype.h \
   include/elf.h \
   include/vxworks.h \
+  /home/gxgx/edsion/edison-src/build/tmp/work/edison-poky-linux/u-boot/2014.04-1-r0/git/arch/x86/include/asm/bootparam.h \
+  include/linux/screen_info.h \
+  include/linux/apm_bios.h \
+  include/linux/ioctl.h \
+  /home/gxgx/edsion/edison-src/build/tmp/work/edison-poky-linux/u-boot/2014.04-1-r0/git/arch/x86/include/asm/ioctl.h \
+  include/asm-generic/ioctl.h \
+  include/linux/edd.h \
+  /home/gxgx/edsion/edison-src/build/tmp/work/edison-poky-linux/u-boot/2014.04-1-r0/git/arch/x86/include/asm/e820.h \
+    $(wildcard include/config/nodes/shift.h) \
+    $(wildcard include/config/efi.h) \
+    $(wildcard include/config/x86/64.h) \
+    $(wildcard include/config/x86/32.h) \
+    $(wildcard include/config/hibernation.h) \
+    $(wildcard include/config/memtest.h) \
+  /home/gxgx/edsion/edison-src/build/tmp/work/edison-poky-linux/u-boot/2014.04-1-r0/git/arch/x86/include/asm/ist.h \
+  /home/gxgx/edsion/edison-src/build/tmp/work/edison-poky-linux/u-boot/2014.04-1-r0/git/arch/x86/include/asm/video/edid.h \
 
 common/cmd_elf.o: $(deps_common/cmd_elf.o)
 

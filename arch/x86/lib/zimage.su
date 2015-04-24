@@ -5,3 +5,4 @@ zimage.c:268:13:board_final_cleanup	4	static
 zimage.c:272:6:boot_zimage	28	static
 zimage.c:309:6:__setup_pcat_compatibility	4	static
 zimage.c:313:5:do_zboot	40	static
+zimage.c:368:5:do_loade820	60	static
